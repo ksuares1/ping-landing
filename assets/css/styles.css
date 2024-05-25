@@ -1,0 +1,37 @@
+
+.ping-logo{
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+    padding-bottom: 2%;
+}
+
+
+
+.email-info-container , .coming-soon {
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe{
+    display: flex;
+    justify-content: center;
+    margin:-1%;
+}
+
+.dashboard{
+   position: relative;
+    left: 30%;
+    margin: 40px;
+    height: 50%;
+    width: 50%;
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center; }
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+
+
+}
