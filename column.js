@@ -8,9 +8,12 @@ Pseudocode
 
 
 function emailInput(input){
-    if (input === "email"){
+    if (emailInput.trim() === "") {
+        console.log("Email field is empty")
+    } else if (input === "email"){
         console.log("Thank you!");
-    }
-    
+    } else {
+        console.log("Invalid email");
 
+    }
 }
