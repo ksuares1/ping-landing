@@ -5,35 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./assets/css/styles.css">
-   <title>Frontend Mentor | Ping coming soon page</title>
- </head>
-
-
-
- <body>
-<main>
-
+  <title>Frontend Mentor | Ping coming soon page</title>
+</head>
+<body>
+  <main>
     <div class="ping-logo">
       <img src="assets/images/logo.svg" alt="ping-logo">
     </div>
 
     <div class="coming-soon">
-    <h1>We are launching soon!</h1> 
-      </div>
+      <h1>We are launching soon!</h1> 
+    </div>
 
-      <div class="subscribe">
-   <h5>Subscribe and get notified</h5>
-   </div>
+    <div class="subscribe">
+      <h5>Subscribe and get notified</h5>
+    </div>
 
-   <!-- Email container -->
-   <div class="email-info-container">
-   <span>
-  <input type="email" id="email" name="email" placeholder="Your Email Address">
-     <button class="submit-btn">Notify Me</button>
-    
-   <span class="Thank You!"></span>
-    <span class="Please Fill out required feild."></span>
-   </span>
+    <!-- Email container -->
+    <div class="email-info-container">
+      <span>
+        <input type="email" id="email" name="email" placeholder="Your Email Address">
+        <button class="submit-btn">Notify Me</button>
+        <span class="tku-message"></span>
+        <span class="error-message"></span>
+      </span>
     </div>
 
     <!-- Illustration -->
@@ -41,15 +36,39 @@
       <img class="dashboard" src="assets/images/illustration-dashboard.png" alt="landing-page-dashboard">
     </div>
 
-
-  <!-- &copy; Copyright Ping. All rights reserved. -->
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#"></a>.
-    </p>
-  </footer>
+    <!-- &copy; Copyright Ping. All rights reserved. -->
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Your Name</a>.
+      </p>
+    </footer>
   </main>
   <script src="./column.js"></script>
+  <script>
+    document.querySelector(".submit-btn").addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent form submission
+
+      const emailInput = document.getElementById("email");
+      const email = emailInput.value.trim();
+      const tkuMessage = document.querySelector(".tku-message");
+      const errorMessage = document.querySelector(".error-message");
+
+      if (validateEmail(email)) {
+        tkuMessage.style.display = "block";
+        errorMessage.style.display = "none";
+        tkuMessage.textContent = "Thank you for subscribing!";
+      } else {
+        tkuMessage.style.display = "none";
+        errorMessage.style.display = "block";
+        errorMessage.textContent = "Please enter a valid email address.";
+      }
+    });
+
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(String(email).toLowerCase());
+    }
+  </script>
 </body>
 </html>
