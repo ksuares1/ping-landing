@@ -26,6 +26,26 @@
     height: 50%;
     width: 50%;
 }
+
+
+/* .email-info-container span {
+  display: block;
+  margin: 10px 0;
+} */
+
+.tku-message, .error-message {
+  display: none;
+  font-size: 0.9em;
+}
+
+.tku-message {
+  color: green;
+}
+
+.error-message {
+  color: red;
+}
+
 .attribution { 
     font-size: 11px; 
     text-align: center; }
