@@ -35,7 +35,7 @@ Pseudocode
 
         function userWelcome(loginInfo){
         if (userWelcome === email){
-        alert
+    
     }
     
 
